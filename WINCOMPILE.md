@@ -63,7 +63,7 @@
 
 ## Compile
 
-- download and unzip `xmr-stak-cpu`
+- download and unzip `xmr-stak-amd`
 - open the command line terminal `cmd`
 - `cd` to your unzipped source code directory
 - execute the following commands (NOTE: path to VS2017 can be different)
