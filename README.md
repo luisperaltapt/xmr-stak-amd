@@ -8,10 +8,10 @@ XMR-Stak is a universal Stratum pool miner. This is the AMD GPU-mining version; 
 
 The hashrate shown above was generated on a non-modded, non-overclocked RX 480.
 
-#### Usage on Windows 
+#### Usage on Windows
 
-1) Edit the config.txt file to enter your pool login and password. 
-2) Double click the exe file. 
+1) Edit the config.txt file to enter your pool login and password.
+2) Double click the exe file.
 
 XMR-Stak should compile on any C++11 compliant compiler. Windows compiler is assumed to be MSVC 2015 CE. MSVC build environment is not vendored.
 ```
@@ -100,7 +100,11 @@ LD_LIBRARY_PATH=/usr/lib64/amdgpu-pro-opencl/ ./xmr-stak-amd
 
 GCC version 5.1 or higher is required for full C++11 support. CMake release compile scripts, as well as CodeBlocks build environment for debug builds is included.
 
-#### Mining performance 
+#### Compile guides
+
+- [Windows](WINCOMPILE.md)
+
+#### Mining performance
 
 Mining core is a direct port (except for sercurity fixes) of wolf9466's AMD mining code. Performance is likely to be identical.
 
@@ -151,4 +155,3 @@ c4hC0Yg9Dha1OoE5CJCqVL+ic4vAyB1urAwBlsd/wH8=
 **msvcp140.dll and vcruntime140.dll not available errors**
 
 Download and install this [runtime package](https://www.microsoft.com/en-us/download/details.aspx?id=48145) from Microsoft.  *Warning: Do NOT use "missing dll" sites - dll's are exe files with another name, and it is a fairly safe bet that any dll on a shady site like that will be trojaned.  Please download offical runtimes from Microsoft above.*
-
