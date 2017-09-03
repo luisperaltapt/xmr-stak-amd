@@ -76,5 +76,7 @@
   msbuild xmr-stak-amd.sln /p:Configuration=Release
   cd bin\Release
   copy ..\..\..\config.txt .
+  mkdir opencl
+  copy ..\..\..\opencl\*.* opencl\
   ```
 - customize your `config.txt` file by adding the pool, username and password
