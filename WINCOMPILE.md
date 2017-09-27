@@ -82,6 +82,7 @@
   ```
   #pragma comment(lib, "Ws2_32.lib")
   ```
+- save the file
 - go back to command line you left open and continue with the following commands:
   ```
   msbuild xmr-stak-amd.sln /p:Configuration=Release
