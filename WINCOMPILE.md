@@ -68,6 +68,7 @@
 - `cd` to your unzipped source code directory
 - execute the following commands (NOTE: path to VS2017 can be different)
   ```
+  set "VSCMD_START_DIR=%CD%"
   "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsMSBuildCmd.bat"
   set CMAKE_PREFIX_PATH=C:\xmr-stak-dep\hwloc;C:\xmr-stak-dep\libmicrohttpd;C:\xmr-stak-dep\openssl
   mkdir build
@@ -76,6 +77,7 @@
   msbuild xmr-stak-amd.sln /p:Configuration=Release
   cd bin\Release
   copy ..\..\..\config.txt .
+  copy c:\xmr-stak-dep\openssl\bin\*.* .
   mkdir opencl
   copy ..\..\..\opencl\*.* opencl\
   ```
