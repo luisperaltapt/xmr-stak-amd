@@ -76,9 +76,9 @@
   cmake -G "Visual Studio 15 2017 Win64" -T v141,host=x64 ..
   ```
 - keep the command line open
-- Explore into C:\xmr-stak-amd-master\build and launch xmr-stak-amd.vcxproj on VS
-- in the project source files open any .cpp file (e.g. socket.cpp)
-- before the includes, on top add the following line
+- explore into `C:\xmr-stak-amd-master\build` and launch `xmr-stak-amd.vcxproj` on Visual Studio
+- in the Solution Explorer open `xmd-stak-amd > Source files > socket.cpp` (or any other .cpp file)
+- on top, before the includes, add the following line
   ```
   #pragma comment(lib, "Ws2_32.lib")
   ```
