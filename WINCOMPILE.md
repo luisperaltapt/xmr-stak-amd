@@ -68,14 +68,26 @@
 - `cd` to your unzipped source code directory
 - execute the following commands (NOTE: path to VS2017 can be different)
   ```
+  set "VSCMD_START_DIR=%CD%"
   "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\Tools\VsMSBuildCmd.bat"
   set CMAKE_PREFIX_PATH=C:\xmr-stak-dep\hwloc;C:\xmr-stak-dep\libmicrohttpd;C:\xmr-stak-dep\openssl
   mkdir build
   cd build
   cmake -G "Visual Studio 15 2017 Win64" -T v141,host=x64 ..
+  ```
+- keep the command line open
+- explore into `C:\xmr-stak-amd-master\build` and launch `xmr-stak-amd.vcxproj` on Visual Studio
+- in the Solution Explorer open `xmd-stak-amd > Source files > socket.cpp` (or any other .cpp file)
+- on top, before the includes, add the following line
+  ```
+  #pragma comment(lib, "Ws2_32.lib")
+  ```
+- go back to command line you left open and continue with the following commands:
+  ```
   msbuild xmr-stak-amd.sln /p:Configuration=Release
   cd bin\Release
   copy ..\..\..\config.txt .
+  copy c:\xmr-stak-dep\openssl\bin\*.* .
   mkdir opencl
   copy ..\..\..\opencl\*.* opencl\
   ```
